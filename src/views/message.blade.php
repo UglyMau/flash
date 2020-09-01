@@ -6,7 +6,7 @@
             'body'       => $message['message']
         ])
     @else
-		<div class="uk-alert-{{ $message['level'] }}" uk-alert>
+		<div class="uk-alert-{{ $message['level'] }} uk-animation-slide-top" uk-alert>
 			@if ($message['important'])
 				<a class="uk-alert-close" uk-close></a>
 			@endif
