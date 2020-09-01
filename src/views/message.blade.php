@@ -7,10 +7,8 @@
         ])
     @else
 		<div class="uk-alert-{{ $message['level'] }} uk-animation-slide-top" uk-alert>
-			@if ($message['important'])
-				<a class="uk-alert-close" uk-close></a>
-			@endif
-			<p>{!! $message['message'] !!}</p>
+			<a class="uk-alert-close" uk-close></a>
+			<p @if($message['important']) style="font-weight: bold;" @endif>{!! $message['message'] !!}</p>
 		</div>
     @endif
 @endforeach
